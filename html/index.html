@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding:0;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+			color: #333;
+		}
+
+		/*<!-- 头部开始 -->*/
+		.header{
+			width: 100%;
+			height: 77px;
+			background-color: white;
+			position: fixed;
+			z-index: 999;
+			border-bottom: 90px;
+		}
+		.header .header-c{
+			height: 100%;
+			width: 1200px;
+			margin: 0 auto;
+			background-color: white;
+			/*overflow: hidden;*/
+
+		}
+		.header .header-c .logo{
+			display: block;
+			background:url(img/logo-ml.jpg) no-repeat center;
+			width: 106px;
+			height: 45px;
+			/*margin-left: 65px;*/
+			margin-top: 20px; 
+			float: left;
+		}
+		.header .header-c .nav{
+			float: left;
+			/*background-color: green;*/
+			height: 100%;
+			width: 600px;
+			margin-left: 494px;
+		}
+		.header .header-c .subnav{              /*ul*/
+			width: 100%;
+			height: 100%;
+
+		}
+		.header .header-c .subnav .subnav-item{
+			float: left;
+			/*background-color: yellow;*/
+			width: 40px;
+			height: 30px;
+			font-size: 16px;
+		    border-bottom: 2px solid #41dfef;
+			margin-top: 28px;
+			text-align: center;
+
+		}
+		.header .header-c .subnav .subnav-item a{
+			color:#41dfef;
+			
+		}
+		.header .header-c .subnav .subnav-text{
+			float: left;
+			/*background-color: yellow;*/
+			width: 65px;
+			height: 30px;
+			font-size: 16px;
+			margin-left: 75px;
+
+			margin-top: 28px;
+			text-align: center;
+		}
+		.header .header-c .subnav .subnav-text .zx{
+			display: none;
+			margin-top: 10px;
+		}
+
+		.header .header-c .subnav .subnav-text:hover{
+			border-bottom: 2px solid #41dfef;
+			color: #41dfef;
+		}
+		.header .header-c .subnav .subnav-text:hover .zx{
+			display: block;
+		}
+		.header .header-c .subnav .subnav-text .zx a:hover{
+			color: red;
+		}
+		.header .header-c .subnav .subnav-text .zx a{
+			display: block;
+			width: 65px;
+			height: 30px;
+			font-size: 14px;
+			background-color: gray;
+			color: black;
+		}
+		.header .header-c .subnav .subnav-text:hover a{
+			color: #41dfef;
+		}
+		.header .header-c .subnav a{
+			color: #c9c9c9;
+		}
+
+		.banner{
+			width: 100%;
+			height: 623px;
+			background-color: #779ec5;
+			overflow: hidden;
+
+		}
+		.banner .banner-c{
+			height: 100%;
+			width: 1200px;
+			background: url(img/banner.jpg) no-repeat center;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+			margin-top: 0px;
+		}
+		.banner .banner-c .dotts{
+			width: 150px;
+			height: 200px;
+			position: absolute;
+			top:560px; 
+			left:540px;
+			/*background: yellow;*/
+		}
+		.banner .banner-c .dotts li{
+			float: left;
+			width: 11px;
+			height: 11px;
+            margin-left: 20px;
+			border:2px solid #f9fafa;
+			border-radius: 50%;
+		}
+		.banner .banner-c .dotts a{
+            width: 11px;
+			height: 11px;
+			display: block;
+			
+		}
+		.banner .banner-c .dotts li:hover a{
+			background-color: white;
+			}
+		.banner .banner-c .dotts .dotts-text{
+		    background-color: white;
+		}
+
+		.containter{
+			width: 100%;
+			/*background-color: pink;*/
+			height: 2476px;
+			/*margin-top: 100px;*/
+
+
+		}
+		.containter .containter-c{
+			position: relative;
+			width: 1200px;
+			height: 100%;
+			margin: 0 auto;
+			/*background-color: purple;*/
+		}
+
+		/*共用标题*/
+		.containter .title{
+			padding-top: 100px;
+			width: 100%;
+			height: 85px;
+
+		}
+		.containter .containter-c .blue{
+			position: absolute;
+			top: 105px;
+			left: -25px;
+			float: left;
+			width: 50px;
+			height: 12px;
+			background-color: #04e4f8;
+		}
+		.containter .containter-c h3{
+			position: absolute;
+			left: 5px; 
+			z-index: 999;
+
+		}
+		.containter .containter-c span{
+			display: block;
+			font-size: 14px;
+			color: #c7c7c7;
+			margin-top: 30px;
+			width:213px; 
+			height:14px;
+		}
+		/*共用标题结束*/
+
+		.containter .containter-c .text{
+			margin-top: 40px;
+			width: 100%;
+			height: 274px;
+			/*background-color: lightblue;*/
+		}
+		.containter .containter-c .text img{
+			float: left;
+		}
+		.containter .containter-c .text .text-item{
+			float: left;
+			width: 820px;
+			background-color:#fbfbfb;
+			height:170px;
+			margin-top: 52px;
+		}
+		.containter .containter-c .text .text-item .rotate{
+			display: block;
+			width: 6px;
+			height: 6px;
+			background-color: pink;
+			transform: rotate(45deg);
+			margin-top: 0px;
+			/*margin-left: 5px;*/
+			float: left;
+			position: absolute;
+			top: 6px;
+			left: 212px;
+		}
+		.containter .containter-c .text .text-item .rotate2{
+			display: block;
+			width: 6px;
+			height: 6px;
+			background-color: orange;
+			transform: rotate(45deg);
+			margin-top: 0px;
+			/*margin-left: 5px;*/
+			float: left;
+			position: absolute;
+			top: 6px;
+			left: 284px;
+		}
+		.containter .containter-c .text .text-item .rotate3{
+			display: block;
+			width: 6px;
+			height: 6px;
+			background-color: #8c97cb;
+			transform: rotate(45deg);
+			margin-top: 0px;
+			/*margin-left: 5px;*/
+			float: left;
+			position: absolute;
+			top: 6px;
+			left: 353px;
+		}
+		.containter .containter-c .text .text-item .rotate4{
+			display: block;
+			width: 6px;
+			height: 6px;
+			background-color: #7ecef4;
+			transform: rotate(45deg);
+			margin-top: 0px;
+			/*margin-left: 5px;*/
+			float: left;
+			position: absolute;
+			top: 6px;
+			left: 435px;
+		}
+		.containter .containter-c .text .text-item .rotate5{
+			display: block;
+			width: 6px;
+			height: 6px;
+			background-color: #cce198;
+			display: block;
+			width: 6px;
+			height: 6px;
+			background-color: #cce198;
+			transform: rotate(45deg);
+			margin-top: 0px;
+			/*margin-left: 5px;*/
+			float: left;
+			position: absolute;
+			top: 6px;
+			left: 476px;
+		}
+		.containter .containter-c .text .text-item .rotate6{
+			display: block;
+			width: 6px;
+			height: 6px;
+			background-color: #cce198;
+			display: block;
+			width: 6px;
+			height: 6px;
+			background-color: #84ccc9;
+			transform: rotate(45deg);
+			margin-top: 0px;
+			/*margin-left: 5px;*/
+			float: left;
+			position: absolute;
+			top: 6px;
+			left: 544px;
+		}
+			
+		.containter .containter-c .text .text-item .tit{
+			font-weight: bolder;
+			font-size: 22px;
+			color: #404040;
+			text-align: center;
+			margin-top: 40px;
+		}
+		.containter .containter-c .text .text-item p{
+			font-size: 14px;
+			color: #8b8b8c;
+			text-align: center;
+			margin-top: 20px;
+			position: relative;
+		}
+		.containter .containter-c .text2{
+			
+			width: 100%;
+			height: 274px;
+			/*background-color: lightblue;*/
+		}
+		.containter .containter-c .text2 img{
+			float: left;
+		}
+		.containter .containter-c .text2 .text-item{
+			float: left;
+			width: 820px;
+			background-color:#fbfbfb;
+			height:170px;
+			margin-top: 52px;
+		}
+		.containter .containter-c .text2 .text-item .tit{
+			font-weight: bolder;
+			font-size: 22px;
+			color: #404040;
+			text-align: center;
+			margin-top: 40px;
+		}
+		.containter .containter-c .text2 .text-item p{
+			font-size: 14px;
+			color: #8b8b8c;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		.containter .containter-c .text3{
+			
+			width: 100%;
+			height: 274px;
+			/*background-color: lightblue;*/
+		}
+		.containter .containter-c .text3 img{
+			float: left;
+		}
+		.containter .containter-c .text3 .text-item{
+			float: left;
+			width: 820px;
+			background-color:#fbfbfb;
+			height:170px;
+			margin-top: 52px;
+		}
+		.containter .containter-c .text3 .text-item .tit{
+			font-weight: bolder;
+			font-size: 22px;
+			color: #404040;
+			text-align: center;
+			margin-top: 40px;
+		}
+		.containter .containter-c .text3 .text-item p{
+			font-size: 14px;
+			color: #8b8b8c;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		.containter .containter-c .more{
+			width: 390px;
+			height: 65px;
+			border: 1px solid #f2f2f2;
+			margin-left: 400px;
+			margin-top: 66px;
+			font-size: 16px;
+			
+			text-align: center;
+			line-height: 65px;
+		}
+		.containter .containter-c .more a{
+            color: #f2f2f2;
+            display: block;
+            width: 100%;
+            height: 100%;
+		}
+		.containter .containter-c .more:hover a{
+			background-color: #fbfbfb;
+			color: black;
+		}
+
+		.containter .containter-c .we{
+			width: 100%;
+			height: 297px;
+			background-color: #fbfbfb;
+			margin-top: 99px;
+			position: relative;
+		}
+		.containter .containter-c .we img{
+			position: absolute;
+			top: 0;
+			left: -200px;
+		}
+
+		.containter .containter-c .we .title{
+			padding-top: 64px;
+			width: 424px;
+			height: 0px;
+			float: left;
+
+		}
+		.containter .containter-c .we .title .blue{
+			position: absolute;
+			top: 70px;
+			left: -25px;
+			float: left;
+			width: 50px;
+			height: 12px;
+			background-color: #04e4f8;
+		}
+		.containter .containter-c .we h3{
+			position: absolute;
+			left: 5px; 
+			z-index: 999;
+			color: white;
+
+		}
+		.containter .containter-c .we .title span{
+			display: block;
+			font-size: 14px;
+			color:#c7c7c7;      /*#c7c7c7*/
+			margin-top: 30px;
+			margin-left: 15px;
+			width:213px; 
+			height:14px;
+			position: absolute;
+			z-index: 999;
+		}
+		.containter .containter-c .we .we-text{
+			float: left;
+			width: 470px;
+			height: 70px;
+			/*background-color: yellow;*/
+            margin-left:650px; 
+            font-size: 13px;
+            margin-top: 20px;
+
+		}
+		.containter .containter-c .we .we-text span{
+			float: left;
+			width: 78px;
+			height: 38px;
+			color: black;
+			display: block;
+			margin-top: 1px;
+			color: #797979;
+		}
+		.containter .containter-c .we .we-text h4{
+			color: black;
+		}
+		.containter .containter-c .we .we-text p{
+			margin-top: 1px;
+			margin-left: 2px;
+		    float: left;
+			color:#868686;
+			width: 390px;
+			height: 30px;
+		}
+		.containter .containter-c .we .we-text2{
+			float: left;
+			width: 470px;
+			height: 70px;
+			/*background-color: yellow;*/
+            margin-left:650px;
+            margin-top: 20px; 
+            font-size: 13px;
+
+		}
+		.containter .containter-c .we .we-text2 span{
+			float: left;
+			width: 78px;
+			height: 38px;
+			color: black;
+			display: block;
+			margin-top: 1px;
+			color: #797979;
+		}
+		.containter .containter-c .we .we-text2 h4{
+			color: black;
+		}
+		.containter .containter-c .we .we-text2 p{
+			margin-top: 1px;
+			margin-left: 2px;
+		    float: left;
+			color:#868686;
+			width: 390px;
+			height: 30px;
+		}
+		.containter .containter-c .line{
+			position: relative;
+			width: 100%;
+			height: 900px;
+			/*background-color: orange;*/
+			/*margin-top: 100px;*/
+		}
+		.containter .containter-c .line .line-text{
+			height: 496px;
+			width: 100%;
+			background-color: #fbfbfb;
+		}
+        .containter .containter-c .line-text .line-item{
+        	float: left;
+        	width: 397px;
+        	height: 148px;
+        	/*background-color: yellow;*/
+        	font-size: 18px;
+        	font-weight: bold;
+        	text-align: center;
+        	margin-top: 100px;
+        	color: #5d5d5d;
+        }
+        .containter .containter-c .line-text .line-item a{
+        	display: block;
+        	float: left;
+        	width: 100%;
+        	height: 100%;
+        }
+        .containter .containter-c .line-text .line-item p{
+        	font-size: 16px;
+        	color: #d1d1d1;
+        	line-height: 1px;
+        	font-weight: normal;
+        	margin-top: 20px;
+        }
+        .containter .containter-c .line-text img{
+        	float: left;
+        }
+        .containter .containter-c .line .more a{
+            color: #f2f2f2;
+            display: block;
+            width: 100%;
+            height: 100%;
+		}
+		.containter .containter-c .line .more:hover a{
+			background-color: #fbfbfb;
+			color: black;
+		}
+
+        .footer{
+        	width: 100%;
+        	height: 300px;
+            background-color: #335460;
+        }
+        .footer .footer-c{
+        	overflow: hidden;
+        	width: 1200px;
+        	height: 100%;
+        	margin: 0 auto;
+        	background: url(img/foot.jpg) no-repeat center;
+        }
+        .footer .footer-c .left{
+        	float: left;
+        	width: 300px;
+        	height:128px;
+        	/*background-color: yellow;*/
+        	margin-top: 100px;
+        	margin-left: 250px;
+        }
+        .footer .footer-c .left .dingzhi{
+        	width: 140px;
+        	height: 38px;
+        	/*background-color: #04e4f8;*/
+        	margin-top: 00px;
+        	margin-left: 30px;
+        	font-size: 20px;
+        	color: white;
+        	font-weight: bold;
+        	text-align: center;
+        	line-height: 38px;
+        	border: 1px solid #7e898d;
+        	
+        }
+        .footer .footer-c .left .dingzhi a{
+        	color:white;
+        	
+        	display: block; 
+
+        }
+        .footer .footer-c .left .dingzhi:hover a{
+        	background-color:#04e4f8;
+        }
+        .footer .footer-c .right .dingzhi{
+        	width: 140px;
+        	height: 38px;
+        	/*background-color: #04e4f8;*/
+        	margin-top: 00px;
+        	margin-left: 30px;
+        	font-size: 20px;
+        	color: white;
+        	font-weight: bold;
+        	text-align: center;
+        	line-height: 38px;
+        	border: 1px solid #7e898d;
+        	
+        }
+        .footer .footer-c .right .dingzhi a{
+        	color:white;
+        	
+        	display: block; 
+
+        }
+        .footer .footer-c .right .dingzhi:hover a{
+        	background-color:#04e4f8;
+        }
+        .footer .footer-c p{
+        	color: #7e898d;
+        	font-size: 22px;
+        	/*margin-left: 190px;
+        	margin-top: 20px;*/
+        }
+        .footer .footer-c .p1{
+            color: #7e898d;
+        	font-size: 12px;
+        	margin-left:20px;
+        	margin-top: 10px;	
+        }
+        .footer .footer-c span{
+        	display: block;
+        	width: 30px;
+        	height: 0px;
+        	border: 1px solid gray;
+        	margin-left: 80px;
+            margin-top: 20px;
+        }
+
+        .footer .footer-c .right{
+        	float: left;
+        	width: 300px;
+        	height:128px;
+        	/*background-color: red;*/
+        	margin-top: 100px;
+        	margin-left: 200px;
+        }
+        .footer .footer-c p{
+        	color: #7e898d;
+        	font-size: 22px;
+        	/*margin-left: 190px;
+        	margin-top: 20px;*/
+        }
+        .footer .footer-c .p1{
+            color: #7e898d;
+        	font-size: 12px;
+        	margin-left:20px;
+        	margin-top: 10px;	
+        }
+        .footer .footer-c span{
+        	display: block;
+        	width: 30px;
+        	height: 0px;
+        	border: 1px solid gray;
+        	margin-left: 80px;
+            margin-top: 20px;
+        }
+        .finishi{
+        	width: 100%;
+        	height: 540px;
+        	/*background-color: green;*/
+        }
+        .finishi .finishi-c{
+        	margin: 0 auto;
+        	height: 100%;
+        	width: 1200px;
+        	background-color: white;
+        	position:relative;
+
+        }
+        .finishi .title{
+			padding-top: 100px;
+			width: 100%;
+			height: 85px;
+
+		}
+		.finishi .finishi-c .blue{
+			position: absolute;
+			top: 105px;
+			left: -25px;
+			float: left;
+			width: 50px;
+			height: 12px;
+			background-color: #04e4f8;
+		}
+		.finishi .finishi-c h3{
+			position: absolute;
+			left: 5px; 
+			z-index: 999;
+
+		}
+		.finishi .finishi-c span{
+			display: block;
+			font-size: 14px;
+			color: #c7c7c7;
+			margin-top: 30px;
+			width:213px; 
+			height:14px;
+		}
+		.finishi .finishi-c .finishi-left{
+			float: left;
+			width: 600px;
+			height: 250px;
+			/*background-color: pink;*/
+			font-size: 14px;
+			color: #9fa2a2;
+			line-height: 30px;
+		}
+		.finishi .finishi-c .finishi-left .finishi-text{
+			font-size: 18px;
+			color: #5d5d5d;
+			margin-bottom: 10px;
+		}
+		.finishi .finishi-c .finishi-left .photo{
+			margin-top: 20px;
+			
+			width: 150px;
+			height: 35px;
+			/*background-color: black;*/
+
+		}
+		.finishi .finishi-c .finishi-left img{
+			margin-right: 15px;
+			margin-left: 10px;
+
+		}
+		.finishi .finishi-c .finishi-right{
+			float: left;
+			width: 525px;
+			height: 250px;
+			/*background-color: purple;*/
+			font-size: 14px;
+			color: #9fa2a2;
+			line-height: 30px;
+			margin-left: 74px;
+		}
+		.finishi .finishi-c .finishi-right .input-item{
+			width: 130px;
+			height: 78px;
+			border-bottom: 1px solid #bfbdbd;
+			/*background-color: green; */
+			float: left;
+			margin-left: 45px;
+		}
+		.finishi .finishi-c .input-item .username{
+             color: #bfbdbd;
+             font-size: 14px;   
+             margin-top: 20px;
+            /* background-color: yellow;*/
+             width: 100%;
+             height: 30px;
+		}
+		.finishi .finishi-c .input-item .input-username{
+			outline: none;
+			width: 130px;
+			height: 25px;
+			border:none;
+			margin-top: -10px;
+		}
+
+		.finishi .finishi-c .finishi-right .input-item2{
+			width: 480px;
+			height: 78px;
+			border-bottom: 1px solid #bfbdbd;
+			/*background-color: green; */
+			float: left;
+			margin-left: 45px;
+		}
+		.finishi .finishi-c .input-item2 .username{
+             color: #bfbdbd;
+             font-size: 14px;
+             margin-top: 20px;
+            /* background-color: yellow;*/
+             width: 100%;
+             height: 30px;
+		}
+		.finishi .finishi-c .input-item2 .input-username{
+			outline: none;
+			width: 100%;
+			height: 25px;
+			border:none;
+			margin-top: -10px;
+		}
+
+
+		.finishi .finishi-c .finishi-right .btn{
+			width: 60px;
+			height: 25px;
+			background-color: #474646;
+			font-size: 14px;
+			
+			margin-left: 45px;
+			border:none;
+			text-align: center;
+			line-height: 25px;
+			margin-top: 34px;
+			float: left;
+
+		}
+		.finishi .finishi-c .finishi-right .btn a{
+			display: block;
+			color:#adadad;
+			width: 100%;
+			height: 100%;
+		}
+
+        
+
+		
+		
+
+
+
+	</style>
+</head>
+<body>
+	<!-- 头部开始 -->
+    <div class="header">
+    	<!-- 版心开始 -->
+    	<div class="header-c">
+    		<!-- logo部分 -->
+    		<a href="#" class="logo"></a>
+    		<!-- 导航开始 -->
+    		<div class="nav">
+    			<ul class="subnav">
+
+    				<li  class="subnav-item"><a href="#">首页</a></li>
+    				<li class="subnav-text"><a href="#">特别策划</a></li>
+    				<li class="subnav-text"><a href="#">精品路线</a></li>
+    				<li class="subnav-text"><a href="#">关于我们</a>
+    					<div class="zx">
+    						<a href="">咨询</a>
+    						<a href="">咨询</a>
+    					</div>
+    				</li>
+    				<li class="subnav-text"><a href="#">联系我们</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    </div>
+    <!-- banner开始 -->
+    <div class="banner">
+    	<!-- 版心开始 -->
+    	<div class="banner-c">
+    		<ul class="dotts">
+    			<li class="dotts-text"><a href=""></a></li>
+    			<li><a href=""></a></li>
+    			<li><a href=""></a></li>
+    		</ul>
+    	</div>
+
+    </div>
+    <!-- 内容开始 -->
+    <div class="containter">
+    	<!-- 版心 -->
+    	<div class="containter-c">
+    		<!-- 共用标题 -->
+    		<div class="title">
+    		<div class="blue">
+    			
+    		</div>
+    		<h3>特别策划</h3>
+    		<span>ACTIVITY ROUTR</span>
+    		</div>
+    		<!-- 共用标题结束 -->
+
+    		<div class="text">
+    			<img src="img/tebie.jpg">
+    			<div class="text-item">
+    				<p class="tit">苍山洱海旁，过一段慢时光</p>
+    				<p>云南风花雪月之旅 （6days）</p>
+    				
+
+    				<p>
+    					<span class="rotate"></span>洱海骑行 
+    					<span class="rotate2"></span>
+    					   &nbsp;&nbsp;手作扎染
+    					<span class="rotate3"></span>
+    					    &nbsp;&nbsp;泸沽湖划船
+    					<span class="rotate4"></span>
+    					    &nbsp;&nbsp;草海
+    					<span class="rotate5"></span>
+    					    &nbsp;&nbsp;束河古镇
+    					<span class="rotate6"></span>
+    					    &nbsp;&nbsp;拉市海
+    				</p>
+    			</div>
+    		</div>
+    		<div class="text2">
+    			
+    			<div class="text-item">
+    				<p class="tit">苍近距离看“滚滚”花式卖萌</p>
+    				<p>成都City  Walk之旅 （6days）</p>
+    				<p>熊猫基地    宽窄巷子    武侯祠    小酒馆    吃货天堂    锦里</p>
+    			</div>
+    			<img src="img/tebie2.jpg">
+    		</div>
+
+    		<div class="text3">
+    			<img src="img/tebie3.jpg">
+    			<div class="text-item">
+    				<p class="tit">骑行青海湖，行摄纯净天空之境</p>
+    				<p>梦回大西北之旅 （6days）</p>
+    				<p>茶卡盐湖    U型天路     青海湖日出    魔鬼城    七彩丹霞    莫高窟</p>
+    			</div>
+    		</div>
+    		<div class="more"><a href="">MORE</a></div>
+    		<div class="we">
+    			<!-- 标题 -->
+    			<img src="img/we.jpg">
+    			<div class="title">
+    		    <div class="blue"></div>
+    		    <h3>关于我们</h3>
+    		    <span>ABOUT  US</span>
+    		    </div>
+    		    <div class="we-text">
+    		    	<span><h4>介绍</h4>Introduce</span>
+    		    	<p>新旅行概念社区，在这里，你可以收货来自世界各地的友谊，为您
+                       提供省心、省钱、纯玩、有趣的路线随时带您出发看世界。</p>
+    		    </div>
+    		    <div class="we-text2">
+    		    	<span><h4>理念</h4>Concept</span>
+    		    	<p>每一寸土地都承载着一个城市厚重而亲切的灵魂。About travel, about life, That's all.</p>
+    		    </div>
+    		 </div>
+            <div class="line">
+            	<div class="title">
+    		    <div class="blue"></div>
+    		    <h3>精品路线</h3>
+    		    <span>CLASSICS ROUTR</span>
+    		    </div>
+    		    <div class="line-text">
+    		    	<div class="line-item"><a href="#">京都岚山深度一日游<p>寻找我们的风花雪月</p></a></div>
+    		    	<a href="#"><img src="img/line1.jpg"></a>
+    		    	<div class="line-item"><a href="#">西北精环线自驾游<p>圆一场北方的梦</p></a></div>
+    		    	<a href="#"><img src="img/line2.jpg"></a>
+    		    	<div class="line-item"><a href="#">东极岛三日游<p>后青春时代的海岛记忆</p></a></div>
+    		    	<a href="#"><img src="img/line3.jpg"></a>
+    		    </div>
+    		    <div class="more"><a href="#">MORE</a></div>
+            </div>
+        </div>
+    <div class="footer">
+    	<div class="footer-c">
+    		<div class="left">
+    			<p class="dingzhi"><a href="#">定制团体游</a></p>
+    		
+    		<p>独立成团    &nbsp;&nbsp;&nbsp;专属定制</p>
+    		<p class="p1">简单几步，定制您的私人旅行</p>
+    		<span></span>
+    		</div>
+    		<div class="right">
+    			
+    			<p class="dingzhi"><a href="#">领队自由行</a></p>
+    			<p>金牌领队  &nbsp;&nbsp;&nbsp;  专业跟拍</p>
+    		<p class="p1">解锁陌生，升级地道旅游体验</p>
+    		<span></span>
+    		</div>
+    	</div>
+    	    
+    </div>
+    <div class="finishi">
+    	<div class="finishi-c">
+    		<!-- 标题 -->
+    		<div class="title">
+    		<div class="blue">
+    			
+    		</div>
+    		<h3>联系我们</h3>
+    		<span>CONTACT</span>
+    		</div>
+             <!-- 标题结束 -->
+             <div class="finishi-left">
+             	<p class="finishi-text">慢旅Slow Travle工作室</p>
+             	<p>地点：中国河南省郑州市绿地新都汇</p>
+             	<p>邮编：1000000</p>
+             	<p>电话：0392-23656504</p>
+             	<p>邮箱：manlv@qq.com</p>
+             	<p class="photo">
+             		<img src="img/qq-ml.jpg">
+             		<img src="img/wx-ml.jpg">
+             		<img src="img/wb-ml.jpg">
+             	</p>
+             	<p>COPYRIGHT (©) 2018 mo004_2551 - 生活方式旅游类网站.</p>
+             </div>
+             <div class="finishi-right">
+             	<div class="input-item">
+			        <p class="username">姓名</p>
+			        <input type="text" class="input-username">
+		        </div>
+		        <div class="input-item">
+			        <p class="username">邮箱</p>
+			        <input type="text" class="input-username">
+		        </div>
+		        <div class="input-item">
+			        <p class="username">电话</p>
+			        <input type="text" class="input-username">
+		        </div>
+		        <div class="input-item2">
+			        <p class="username">内容</p>
+			        <input type="text" class="input-username">
+		        </div>
+		        <div class="btn"><a href="#">提交</a></div>
+             </div>
+    	</div>
+    </div>
+</body>
+</html>
