@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .banner{
+            overflow: hidden;
+            width: 600px;
+            height: 400px;
+            margin: 100px auto;
+            background-color: aquamarine;
+            position: relative;
+
+        }
+        .banner .swiper{
+            width: 500%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .banner .swiper .swiper-slide{
+            float: left;
+            height: 100%;
+            width:600px;
+        }
+        .banner .swiper .swiper-slide>img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .banner .dotts{
+            position: absolute;
+            left: 50px;
+            bottom: 50px;
+            height: 12px;
+        
+        }
+        .banner .dotts .dot{
+            float: left;
+            width: 12px;
+            height: 12px;
+            background-color: chocolate;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .banner .dotts .dot>a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .banner .dotts .dot.active{
+            border-color: blueviolet;
+        }
+        .banner .dotts .dot.active>a{
+            background-color: cadetblue;
+        }
+        .banner .arr{
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color:black;
+            position: absolute;
+            top: 50%;
+            line-height: 50px;
+            text-align: center;
+            text-decoration: none;
+            color:white;
+            opacity: 0.5;
+        }
+        .banner .arr:hover{
+            background-color: gray;
+        }
+        .banner .arr.arr-r{
+            right: 0;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <ul class="swiper">
+            <li class="swiper-slide">
+                <img src="img/m1.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="img/m2.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="img/m3.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="img/m4.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="img/m5.jpg">
+            </li>
+        </ul>
+        <a href="javascript:;" class="arr arr-l" onclick="goNext(false);">&lt;</a>
+        <a href="javascript:;" class="arr arr-r" onclick="goNext(true);">&gt;</a>
+        <ul class="dotts">
+            <li class="dot active"><a href="#"></a></li>
+            <li class="dot"><a href="#"></a></li>
+            <li class="dot"><a href="#"></a></li>
+            <li class="dot"><a href="#"></a></li>
+            <li class="dot"><a href="#"></a></li>
+        </ul>
+        
+        
+    </div>
+    <script src="utils/common.js"></script>
+    <script src="utils/common2.js"></script>
+    <script>
+        var swiperEl = document.getElementsByClassName('swiper')[0];
+          
+        var lis = swiperEl.children;
+        var liW = lis[0].offsetWidth;
+        var dotts = document.getElementsByClassName('dotts')[0];
+        var dottLis = dotts.children;
+        var banner = document.getElementsByClassName('banner')[0];
+        var timer = null; 
+        var count = 0;   //计数器
+        autoPlay();    //自动播放
+        initDottEvent();
+        //鼠标进入事件
+        banner.onmouseenter = function(){
+           clearInterval(timer);
+        }
+        //鼠标离开事件
+        banner.onmouseleave = function(){
+            autoPlay();              
+        }
+        //小点点循环绑定事件
+        function initDottEvent(){
+            
+        for(var i = 0 ; i < dottLis.length ; i++){
+            dottLis[i].index = i ;
+            
+            dottLis[i].onclick = function(){
+                count = this.index;
+                var target = -1* count * liW;
+                animate(swiperEl,target);
+                changeDottActive(count);
+            }
+        }
+        }
+
+        function goNext(isRight){
+            //如果点击了右箭头
+            if(isRight){
+                
+                count ++;
+                
+                if(count == lis.length){
+                    count = 0;
+                }
+            }else{
+                count --;
+                if(count == -1){
+                    count = lis.length-1;
+                }
+            }
+            var target = -1*count*liW;
+            animate(swiperEl,target);
+            changeDottActive(count);
+        }
+
+        //缓动动画
+        function autoPlay(){
+        timer = setInterval(function(){
+        count ++;
+        if(count == lis.length){
+            
+            count = 0;
+            animate(swiperEl,0); //0为初始位置
+        }
+        
+        var target = -1*count*liW;
+        animate(swiperEl,target);
+        changeDottActive(count);
+        },2000)
+        }
+        
+       //小点点激活样式
+       
+       function changeDottActive(count){
+           for( var i = 0 ; i < dottLis.length ; i++){
+               removeClassName(dottLis[i],'active');
+           }
+           addClassName(dottLis[count],'active');
+       }
+
+         
+      
+    </script>
+</body>
+</html>
