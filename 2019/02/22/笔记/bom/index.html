@@ -13,6 +13,11 @@
     
 
     
+        <meta name="description" content="title:BOMBOMbrowser object model 浏览器对象模型
+包括定时器,浏览器滚动监听,浏览器宽高….
+包括三大家族(offset/scroll/client)和一个事件对象eventoffset家族
+offsetWidth和offsetHight （检测盒子自身宽高+padd">
+    
 
     <!--Author-->
     
@@ -25,6 +30,11 @@
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="title:BOMBOMbrowser object model 浏览器对象模型
+包括定时器,浏览器滚动监听,浏览器宽高….
+包括三大家族(offset/scroll/client)和一个事件对象eventoffset家族
+offsetWidth和offsetHight （检测盒子自身宽高+padd">
     
 
     <!--Open Graph Site Name-->
@@ -154,141 +164,86 @@
 
     <!-- Main Content -->
     <!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Hexo</h1>
-                    <hr class="small">
-                    <span class="subheading"></span>
+                <div class="post-heading">
+                    <h1>Untitled</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-02-22
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            
-                <div class="post-preview">
-    <a href="/2019/02/22/笔记/readme/">
-        <h2 class="post-title">
-            Untitled
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2019-02-22
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2019/02/22/笔记/js补充/">
-        <h2 class="post-title">
-            js补充
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2019-02-22
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2019/02/22/笔记/js/">
-        <h2 class="post-title">
-            Untitled
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2019-02-22
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2019/02/22/笔记/dom/">
-        <h2 class="post-title">
-            Untitled
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2019-02-22
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2019/02/22/笔记/bom/">
-        <h2 class="post-title">
-            Untitled
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2019-02-22
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2019/02/18/html/">
-        <h2 class="post-title">
-            Untitled
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2019-02-18
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2019/02/18/hello-world/">
-        <h2 class="post-title">
-            Untitled
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2019-02-18
-    </p>
-</div>
-<hr>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
 
-            <ul class="pager">
-    
-    
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <hr>
+<h2 id="title-BOM"><a href="#title-BOM" class="headerlink" title="title:BOM"></a>title:BOM</h2><h2 id="BOM"><a href="#BOM" class="headerlink" title="BOM"></a>BOM</h2><h3 id="browser-object-model-浏览器对象模型"><a href="#browser-object-model-浏览器对象模型" class="headerlink" title="browser object model 浏览器对象模型"></a>browser object model 浏览器对象模型</h3><ul>
+<li>包括定时器,浏览器滚动监听,浏览器宽高….</li>
+<li>包括三大家族(offset/scroll/client)和一个事件对象event<h3 id="offset家族"><a href="#offset家族" class="headerlink" title="offset家族"></a>offset家族</h3></li>
+<li>offsetWidth和offsetHight （检测盒子自身宽高+padding+border）<ul>
+<li>offset宽/高  =  盒子自身的宽/高 + padding +border；</li>
 </ul>
+</li>
+<li>offsetLeft和offsetTop  （检测距离父盒子有定位的左/上面的距离）<ul>
+<li>如果父级都没有定位则以body为准</li>
+</ul>
+</li>
+<li>offsetParent   （检测父系盒子中带有定位的父盒子节点）<ul>
+<li>返回该对象的父级 （带有定位）</li>
+<li>如果当前元素的父级元素没有进行CSS定位,offsetParent为body</li>
+<li>如果当前元素的父级元素中有CSS定位,offsetParent取最近的那个父级元素。<h3 id="offsetLeft和style-left区别"><a href="#offsetLeft和style-left区别" class="headerlink" title="offsetLeft和style.left区别"></a>offsetLeft和style.left区别</h3></li>
+</ul>
+</li>
+<li>style只能获取行内样式的值</li>
+<li>style获取结果是css样式,单位带px,而 offsetLeft获取的是Number类型</li>
+<li><strong>offsetWidth 只能获取整数值</strong></li>
+<li>offsetWidth只读属性,不能赋值;style.width可读写,可以赋值<h3 id="匀速动画"><a href="#匀速动画" class="headerlink" title="匀速动画"></a>匀速动画</h3></li>
+<li>原理:盒子的位置 = 盒子本身所在位置+步长</li>
+<li>案例 焦点图<h3 id="缓动动画"><a href="#缓动动画" class="headerlink" title="缓动动画"></a>缓动动画</h3><ul>
+<li><strong>公式:leader = leader +(tardet-leader)/10</strong></li>
+<li>案例 轮播</li>
+</ul>
+</li>
+</ul>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
         </div>
     </div>
-</div>
-
-
+</article>
 
     <!-- Footer -->
     <hr>
