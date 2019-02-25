@@ -26,7 +26,7 @@ offsetWidth和offsetHight （检测盒子自身宽高+padding+borde">
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="bom">
+        <meta property="og:title" content="Hexo">
     
 
     <!--Open Graph Description-->
@@ -42,7 +42,7 @@ offsetWidth和offsetHight （检测盒子自身宽高+padding+borde">
 
     <!--Type page-->
     
-        <meta property="og:type" content="article">
+        <meta property="og:type" content="website">
     
 
     <!--Page Cover-->
@@ -61,7 +61,7 @@ offsetWidth和offsetHight （检测盒子自身宽高+padding+borde">
 
     <!-- Title -->
     
-    <title>bom - Hexo</title>
+    <title>Hexo</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -171,7 +171,7 @@ offsetWidth和offsetHight （检测盒子自身宽高+padding+borde">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>bom</h1>
+                    <h1>Untitled</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
@@ -223,9 +223,35 @@ offsetWidth和offsetHight （检测盒子自身宽高+padding+borde">
 <li>原理:盒子的位置 = 盒子本身所在位置+步长</li>
 <li>案例 焦点图<h3 id="缓动动画"><a href="#缓动动画" class="headerlink" title="缓动动画"></a>缓动动画</h3><ul>
 <li><strong>公式:leader = leader +(tardet-leader)/10</strong></li>
-<li>案例 轮播</li>
+<li>案例 无限轮播<h3 id="scroll-家族"><a href="#scroll-家族" class="headerlink" title="scroll 家族"></a>scroll 家族</h3></li>
 </ul>
 </li>
+<li>ScrollWidth和scrollHeight<ul>
+<li>检测盒子的宽高</li>
+<li>调用者：节点元素.属性。</li>
+<li>盒子内容的宽高。（如果有内容超出了，显示内容的高度）</li>
+</ul>
+</li>
+<li>scrollTop和scrollLeft<ul>
+<li>网页，被浏览器遮挡的头部和左边部分.也就是被卷进去的头部和左边部分</li>
+<li>scrollLeft 不经常用</li>
+</ul>
+</li>
+<li>兼容性问题<ul>
+<li><code>document.documentElement.scrollTop</code></li>
+<li><code>window.pageYOffset</code><h3 id="获取title、body、head、html标签"><a href="#获取title、body、head、html标签" class="headerlink" title="获取title、body、head、html标签"></a>获取title、body、head、html标签</h3></li>
+</ul>
+</li>
+<li>document.title — 文档标题</li>
+<li>document.head — 文档的头标签</li>
+<li>document.body — 文档的body标签</li>
+<li><strong>document.documentElement — html</strong> 表示文档的html标签<h3 id="scrollTop"><a href="#scrollTop" class="headerlink" title="scrollTop"></a>scrollTop</h3></li>
+<li>document.documentElement.scrollTop 可以获取或设置一个元素的内容垂直滚动的像素数。<h3 id="onscroll事件"><a href="#onscroll事件" class="headerlink" title="onscroll事件"></a>onscroll事件</h3></li>
+<li>可以监听浏览器的滚动事件</li>
+<li>只要页面滚动无论向左向右，向上向下，哪怕只有1px，都会触动这个事件</li>
+<li>用法:window.onscroll<h3 id="window-scrollTo-屏幕跳转"><a href="#window-scrollTo-屏幕跳转" class="headerlink" title="window.scrollTo 屏幕跳转"></a>window.scrollTo 屏幕跳转</h3></li>
+<li>可把内容滚动到指定的坐标</li>
+<li>格式:window.scrollTo(x,y);</li>
 </ul>
 
 
